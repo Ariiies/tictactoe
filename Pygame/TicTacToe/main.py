@@ -13,7 +13,7 @@ xpoints, opoints, Mode = 0, 0, False
 # function to put elements on the board
 def PutTable():
     if not Mode:
-        mode = "si"
+        mode = "yes"
     else:
         mode="no"
     # point text

@@ -3,10 +3,11 @@ import pygame
 Turno = True
 # classes for the game
 # classes for put the lines on the board
+patch = r"C:\Users\luisa\projects\03-Tic-Tac-Toe\Pygame\TicTacToe\img/" # my rute for the imgages
 class Line1():
     def __init__(self, Screen):
-        self.linea1 = pygame.image.load(r'C:\Users\luisa\OneDrive\Escritorio\Web\14-Master Python\07-PyGame\TicTacToe/img/LineaNegra1.png')
-        self.linea2 = pygame.image.load(r'C:\Users\luisa\OneDrive\Escritorio\Web\14-Master Python\07-PyGame\TicTacToe/img/LineaNegra2.png')
+        self.linea1 = pygame.image.load(patch+'LineaNegra1.png')
+        self.linea2 = pygame.image.load(patch+'LineaNegra2.png')
         self.Screen = Screen
     def Poner(self,COO):
         self.Screen.blit(self.linea1,COO)
@@ -18,7 +19,7 @@ class Line1():
 class WinLine(pygame.sprite.Sprite):
     def __init__(self, X, Y):
         super().__init__()
-        self.image = pygame.image.load(r'C:\Users\luisa\OneDrive\Escritorio\Web\14-Master Python\07-PyGame\TicTacToe/img/red.png')
+        self.image = pygame.image.load(patch+'red.png')
         self.rect = self.image.get_rect()
         self.rect.centerx = X
         self.rect.centery = Y
@@ -27,7 +28,7 @@ class WinLine(pygame.sprite.Sprite):
 class Equis(pygame.sprite.Sprite):
     def __init__(self, Position):
         super().__init__()
-        self.image = pygame.image.load(r'C:\Users\luisa\OneDrive\Escritorio\Web\14-Master Python\07-PyGame\TicTacToe/img/equis.png')
+        self.image = pygame.image.load(patch+'equis.png')
         self.rect = self.image.get_rect()
         self.rect.x, self.rect.y = Position
         self.speed = [0,0]
@@ -35,7 +36,7 @@ class Equis(pygame.sprite.Sprite):
 class Circulo(pygame.sprite.Sprite):
     def __init__(self, Position):
         super().__init__()
-        self.image = pygame.image.load(r'C:\Users\luisa\OneDrive\Escritorio\Web\14-Master Python\07-PyGame\TicTacToe/img/circulo.png')
+        self.image = pygame.image.load(patch+'circulo.png')
         self.rect = self.image.get_rect()
         self.rect.x, self.rect.y = Position
         self.speed = [0,0]
